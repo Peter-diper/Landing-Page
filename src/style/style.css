@@ -110,8 +110,11 @@ input,button{
     
 }
 .footer .sircle:hover {
+    color:var(--magenta) ;
     outline: 1px solid var(--magenta);
+    
 }
- .footer .sircle > i:hover{
-    color: var(--magenta);
+ .footer .sircle > i{
+    
+    outline: none;
  }
