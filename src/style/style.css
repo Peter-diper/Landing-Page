@@ -1,17 +1,17 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
-html{
+*{
+    box-sizing: border-box;
+}
+html {
     font-size: 100%;
     --purpole: hsl(257, 40%, 49%);
     --magenta: hsl(300, 69%, 71%);
-    
+
 }
 
-.body{
-    background-image: url(../images/bg-desktop.svg);
-    min-height: 100vh;
+.body {
+     background:url(../images/bg-mobile.svg) ;
     background-color: var(--purpole);
     background-position: center center;
     background-size: cover;
@@ -19,19 +19,19 @@ html{
     font-family: Poppins;
 }
 
-input,button{
+input,
+button {
     font-family: inherit;
 }
 
-.container{
-  max-width: 1440px;
-  margin:auto;
-  padding: 4rem 5rem;
-    
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
 }
 
-.logo{
-    width: 11rem;
+.logo {
+    width: 12rem;
     margin-bottom: 5rem;
 }
 
@@ -40,81 +40,143 @@ input,button{
 * HERO SECTION
 */
 
-
 .hero-section{
-    display: flex;
+    margin-bottom: 0rem ;
 }
-.hero-section__pic{
-    /* background:url(../images/illustration-mockups.svg) center center/cover no-repeat;  */
+
+
+.hero-section__pic {
+    width: 100%;
     flex: 0 0 50%;
+    margin-bottom: 5rem;
+    
+}
+.hero-section__pic > img{
+    width: 100%;
+    
 }
 
-.hero-section__intro{
+.hero-section__intro {
     color: white;
-    width: 50%;
-    padding-left:3.5rem ;
-    padding-right: 1%;
-    padding-top: 2.5rem;
+    text-align: center;
 }
 
-.hero-section__intro__tagline{
-    font-size: 2.9rem;
-    font-weight:600 ;
-    word-spacing: .4rem;
-    line-height: 3.8rem;
-    margin-bottom: 1.7rem;
+.hero-section__intro__tagline {
+    font-size: clamp(1.8rem,5vw,2.5rem);
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+   
 }
 
 
-.hero-section__intro__description{
-    color: rgba(255, 255, 255, 0.947);
-    font-size: 1.1rem;
+.hero-section__intro__description {
+    color: rgba(255, 255, 255, 0.811);
+    font-size: clamp(.9rem , 3vw,1rem);
     font-weight: 400;
     margin-bottom: 1.7rem;
     line-height: 1.5rem;
 }
 
-.hero-section__intro__register{
+.hero-section__intro__register {
     border: none;
-    border-radius: 323rem;
+    border-radius: 3rem;
     width: 12.5rem;
-    font-size: 1.25rem;
-    padding: 1rem 0;
+    font-size: .9rem; 
+    padding: .7rem 0;
     color: var(--purpole);
     cursor: pointer;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
-.hero-section__intro__register:hover{
- background-color: var(--magenta);
- color: white;
+
+.hero-section__intro__register:hover {
+    background-color: var(--magenta);
+    color: rgb(255, 255, 255);
 }
 
 
-.footer{
+.footer {
     display: flex;
     flex-direction: row-reverse;
-    padding-right: .7rem;
+    justify-content: center;
+    margin-top: 5rem;
     color: white;
-    font-size: 2rem;
+    font-size: 1rem;
     gap: 1rem;
 }
 
-.footer .sircle{
+.footer .sircle {
     display: flex;
-    width: 3rem;
-    height: 3rem;
+    width: 1.7rem;
+    height: 1.7rem;
     outline: 1px solid white;
     align-items: center;
     justify-content: center;
     border-radius: 52%;
-    
+
 }
+
 .footer .sircle:hover {
-    color:var(--magenta) ;
+    color: var(--magenta);
     outline: 1px solid var(--magenta);
+
+}
+
+.footer .sircle>i {
+
+    outline: none;
+}
+
+@media (min-width: 768px) {
+    .body{
+        background-image: url(../images/bg-desktop.svg);
+        min-height: 100vh;
+    }
+
+    .container{
+        max-width: 1400px;
+        margin: auto;
+        padding: 4rem 1;
+    }
+
+    .hero-section {
+    display: flex;
+    margin-bottom: 5rem;
+    }
+
+    .hero-section__pic {
+    flex: 0 0 50%;
+    }
+
+    .hero-section__intro{
+    width: 50%;
+    padding-left: 2rem;
+    padding-right: 10%;
+    padding-top: 2.5rem;
+    text-align: left;
+    }
+    
+    .hero-section__intro__tagline{
+        margin-bottom: 1.7rem;
+    }
+
+    .hero-section__intro__register{
+        width: 13rem;
+        padding: 1.1rem 0;
+        
+        
+    }
+
+    .footer {
+        justify-content: end;
+        font-size: 2rem;
+        padding-right: .7rem;
+        margin-top: 2rem;
+    }
+    
+    .footer .sircle{
+        width: 3rem;
+        height: 3rem;
+    }
     
 }
- .footer .sircle > i{
-    
-    outline: none;
- }
